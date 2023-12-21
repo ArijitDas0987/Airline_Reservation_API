@@ -1,0 +1,803 @@
+{
+	"info": {
+		"_postman_id": "47f0921e-4b72-40a2-aa85-d8573d84aac6",
+		"name": "Fly_India",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20424819",
+		"_collection_link": "https://blue-trinity-654615.postman.co/workspace/Practise-API-Testing~4167a8a3-afd1-425e-93b5-d053290c0df0/collection/20424819-47f0921e-4b72-40a2-aa85-d8573d84aac6?action=share&source=collection_link&creator=20424819"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_role\" : \"Admin\",\r\n    \"email\" : \"123456789@gmail.com\",\r\n    \"user_name\" : \"Monali\",\r\n    \"contact\" : \"1234567896\",\r\n    \"password\" : \"123456\",\r\n    \"password2\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/Registration/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"Registration",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"email\" : \"123456789@gmail.com\",\r\n    \"password\" : \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/Login/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"Login",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Data Updation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY4ODM0MzI0LCJpYXQiOjE2NjM2NTAzMjQsImp0aSI6IjUzZDI0MDVhOTM1ZjRiYjY4MjY0NjJmZTcwNTRmYTRmIiwidXNlcl9pZCI6MTB9.gUaHCo9Ry1df8owe7ZuSfyKtJiCadf4g9ZpaMJekm_M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contact\" : \"9325288648\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/UpdateData/7546/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"UpdateData",
+						"7546",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Vehicle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NDkxLCJpYXQiOjE2NjU3NjE0OTEsImp0aSI6IjRlNjQ5ZmE4OGY1ZTRlMThhNjJmNzZkMWE3MDNkMDBiIiwidXNlcl9pZCI6MTh9.R9MQEJ42GwVLCRKy8GpUuLQxSVnZUOmyvqZjrXw9-Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_name\" : \"SpiceJet\",\r\n    \"from_location\" : \"Kolkata\",\r\n    \"destination\" : \"Mumbai\",\r\n    \"date\" : \"2022-10-14\",\r\n    \"time\" : \"9:30:00\",\r\n    \"ticket_price\" : \"6000\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/Admin/AddVehicle/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"Admin",
+						"AddVehicle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NDkxLCJpYXQiOjE2NjU3NjE0OTEsImp0aSI6IjRlNjQ5ZmE4OGY1ZTRlMThhNjJmNzZkMWE3MDNkMDBiIiwidXNlcl9pZCI6MTh9.R9MQEJ42GwVLCRKy8GpUuLQxSVnZUOmyvqZjrXw9-Nk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\" : \"1234567\",\r\n    \"password2\" : \"1234567\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/ChangePassword/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"ChangePassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NzUyLCJpYXQiOjE2NjU3NjE3NTIsImp0aSI6IjkxOTNhYThkNTQ3MjQ4ODA4NjFjMDYzYThlZDUyYzM4IiwidXNlcl9pZCI6MTh9.UzLcj6QgqyKGgHolndDrNkGWF0UtSBju4izYeisLJTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"total_passengers\" : \"4\",\r\n    \"vehicle\" : \"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/Booking/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"Booking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vehicle Data Updation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NzUyLCJpYXQiOjE2NjU3NjE3NTIsImp0aSI6IjkxOTNhYThkNTQ3MjQ4ODA4NjFjMDYzYThlZDUyYzM4IiwidXNlcl9pZCI6MTh9.UzLcj6QgqyKGgHolndDrNkGWF0UtSBju4izYeisLJTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"ticket_price\" : \"7500\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/Admin/VehicleDataUpdate/2983/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"Admin",
+						"VehicleDataUpdate",
+						"2983",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Vehicle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzEwNzUyLCJpYXQiOjE2NjIxMjY3NTIsImp0aSI6ImQwNWFjN2MyYzUzZDRjMDNiYmZkY2JlMmIxYzU3YWNjIiwidXNlcl9pZCI6MTB9.KHokBzKrA-B2aK3BuiFuc1f9OXEHo57XYPPAyV_ZH14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/Admin/DeleteVehicle/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"Admin",
+						"DeleteVehicle",
+						"3",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzEwNzUyLCJpYXQiOjE2NjIxMjY3NTIsImp0aSI6ImQwNWFjN2MyYzUzZDRjMDNiYmZkY2JlMmIxYzU3YWNjIiwidXNlcl9pZCI6MTB9.KHokBzKrA-B2aK3BuiFuc1f9OXEHo57XYPPAyV_ZH14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/DeleteBooking/5727/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"DeleteBooking",
+						"5727",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Passenger Creation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzEwNzUyLCJpYXQiOjE2NjIxMjY3NTIsImp0aSI6ImQwNWFjN2MyYzUzZDRjMDNiYmZkY2JlMmIxYzU3YWNjIiwidXNlcl9pZCI6MTB9.KHokBzKrA-B2aK3BuiFuc1f9OXEHo57XYPPAyV_ZH14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"passenger_name\" : \"Arijit\",\r\n    \"age\" : \"22\",\r\n    \"gender\" : \"Male\",\r\n    \"booking_id\" : \"1\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/Passenger/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"Passenger",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show A particular Booking",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzE3Njg2LCJpYXQiOjE2NjIxMzM2ODYsImp0aSI6ImRiMTMxZGNjNGNlODQ3MzQ5M2YzYTNlOWYxYjQ0NzE1IiwidXNlcl9pZCI6MTF9.Y9CDcLj2iqfs8uAQErDpluXKn_rJwyW8WPx_O6_zdSs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"booking_id\":\"5727\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/ShowParticularBooking/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"ShowParticularBooking",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show Vehicles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzEwNzUyLCJpYXQiOjE2NjIxMjY3NTIsImp0aSI6ImQwNWFjN2MyYzUzZDRjMDNiYmZkY2JlMmIxYzU3YWNjIiwidXNlcl9pZCI6MTB9.KHokBzKrA-B2aK3BuiFuc1f9OXEHo57XYPPAyV_ZH14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/Admin/ShowVehicles/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"Admin",
+						"ShowVehicles",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show A Particular Vehicle",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzEwNzUyLCJpYXQiOjE2NjIxMjY3NTIsImp0aSI6ImQwNWFjN2MyYzUzZDRjMDNiYmZkY2JlMmIxYzU3YWNjIiwidXNlcl9pZCI6MTB9.KHokBzKrA-B2aK3BuiFuc1f9OXEHo57XYPPAyV_ZH14",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"vehicle_id\" : \"8431\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/Admin/ShowParticularVehicle/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"Admin",
+						"ShowParticularVehicle",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show All Bookings Of an User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjY3MzE3Njg2LCJpYXQiOjE2NjIxMzM2ODYsImp0aSI6ImRiMTMxZGNjNGNlODQ3MzQ5M2YzYTNlOWYxYjQ0NzE1IiwidXNlcl9pZCI6MTF9.Y9CDcLj2iqfs8uAQErDpluXKn_rJwyW8WPx_O6_zdSs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/ShowBookings/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"ShowBookings",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"12@gmail.com\",\r\n    \"password\" : \"12345678\",\r\n    \"password2\" : \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/ResetPassword/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"ResetPassword",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contact\" : \"7998067463\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/GenerateOtp/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"GenerateOtp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify Otp",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"contact\" : \"7998067463\",\r\n    \"otp\" : \"2680\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/VerifyOtp/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"VerifyOtp",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Flights",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwNDA0MDI4LCJpYXQiOjE2NjUyMjAwMjgsImp0aSI6IjVlYWE0N2NiNGE3YzQwOTk5OGMyZmI2MTgxMmY5Mjc4IiwidXNlcl9pZCI6MTB9.hh0BKoFpfYrxws09eP12B8o3CnAOqWNnFX7hjzgawBU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"from_location\" : \"koLkAta\",\r\n    \"destination\" : \"Bangalore\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/SearchFlights/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"SearchFlights",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NzUyLCJpYXQiOjE2NjU3NjE3NTIsImp0aSI6IjkxOTNhYThkNTQ3MjQ4ODA4NjFjMDYzYThlZDUyYzM4IiwidXNlcl9pZCI6MTh9.UzLcj6QgqyKGgHolndDrNkGWF0UtSBju4izYeisLJTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/PaymentOrder/57271",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"PaymentOrder",
+						"57271"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment Status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjcwOTQ1NzUyLCJpYXQiOjE2NjU3NjE3NTIsImp0aSI6IjkxOTNhYThkNTQ3MjQ4ODA4NjFjMDYzYThlZDUyYzM4IiwidXNlcl9pZCI6MTh9.UzLcj6QgqyKGgHolndDrNkGWF0UtSBju4izYeisLJTA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/auth/User/PaymentStats/order_KiKimlfMDdDgWO",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"auth",
+						"User",
+						"PaymentStats",
+						"order_KiKimlfMDdDgWO"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
